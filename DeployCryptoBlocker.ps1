@@ -253,10 +253,10 @@ $screenArgs = 'Template', 'Add', "/Template:$fileTemplateName", "/Type:$fileTemp
 ForEach ($group in $fileGroups) {
     $screenArgs += "/Add-Filegroup:$($group.fileGroupName)"
 }
-If ($EmailNotification -ne "") {
+If ($EmailNotification) {
     $screenArgs += "/Add-Notification:m,$EmailNotification"
 }
-If ($EventNotification -ne "") {
+If ($EventNotification) {
     $screenArgs += "/Add-Notification:e,$EventNotification"
 }
 &filescrn.exe $screenArgs
@@ -273,10 +273,10 @@ $drivesContainingShares | ForEach-Object {
 # Cleanup temporary files if they were created
 Write-Host "`n####"
 Write-Host "Cleaning up temporary stuff.."
-If ($EmailNotification -ne "") {
+If ($EmailNotification) {
 	Remove-Item $EmailNotification -Force
 }
-If ($EventNotification -ne "") {
+If ($EventNotification) {
 	Remove-Item $EventNotification -Force
 }
 
