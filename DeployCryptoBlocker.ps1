@@ -18,8 +18,8 @@ $EmailNotification = $env:TEMP + "\tmpEmail001.tmp"
 "Notification=m" >> $EmailNotification
 "To=[Admin Email]" >> $EmailNotification
 ## en
-"Subject=Unauthorized file from the [Violated File Group] file group detected" >> $EmailNotification
-"Message=User [Source Io Owner] attempted to save [Source File Path] to [File Screen Path] on the [Server] server. This file is in the [Violated File Group] file group, which is not permitted on the server."  >> $EmailNotification
+#"Subject=Unauthorized file from the [Violated File Group] file group detected" >> $EmailNotification
+#"Message=User [Source Io Owner] attempted to save [Source File Path] to [File Screen Path] on the [Server] server. This file is in the [Violated File Group] file group, which is not permitted on the server."  >> $EmailNotification
 ## de
 #"Subject=Nicht autorisierte Datei erkannt, die mit Dateigruppe [Violated File Group] übereinstimmt" >> $EmailNotification
 #"Message=Das System hat erkannt, dass Benutzer [Source Io Owner] versucht hat, die Datei [Source File Path] unter [File Screen Path] auf Server [Server] zu speichern. Diese Datei weist Übereinstimmungen mit der Dateigruppe [Violated File Group] auf, die auf dem System nicht zulässig ist."  >> $EmailNotification
